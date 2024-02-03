@@ -93,3 +93,36 @@ const nav = document.querySelector(".nav"),
                 allSection[i].classList.toggle("open");
             }
         }
+
+        /* =============================================== Sending Email ================================================== */
+        function sendEmail()
+        {
+            // console.log("Send Email called");
+
+            // var name = document.getElementById("name").value;
+            // console.log(name);
+            var params = 
+            {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            };
+
+            const serviceID = "service_1q02f8h";
+            const templateID = "template_oehu8gm";
+    
+            emailjs
+            .send(serviceID, templateID, params)
+            .then((res) => {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("subject").value = "";
+                    document.getElementById("message").value = "";
+    
+                    console.log(res);
+                    alert("Message sent successfully!");
+            }).catch((error) => console.log(error));
+
+        }
+
