@@ -682,6 +682,22 @@ h3.my-profession
     color: var(--text-black-900);
     font-weight: 500;
 }
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img h3 /**/
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    color: var(--text-black-900);
+}
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img p /**/
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--text-black-700);
+}
 .portfolio .portfolio-item
 {
     flex: 0 0 33.33%;
